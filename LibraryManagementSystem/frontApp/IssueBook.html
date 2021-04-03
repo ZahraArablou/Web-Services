@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="CSS/main.css" type="text/css" />
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
+   
+    <script src="scripts/scriptIssueBook.js"></script>
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <script>
+       $(document).ready(function() {
+       // getAndDisplayAllmembers();
+       // $("#viewEditPane").hide();
+});
+    </script>
+ </head>
+<body class="body1">
+      <header class=" fixedHeader">
+        <a href="#" class="logo"><img src="images/logo2.jpg" alt="Book logo"></a>
+        <nav>
+            <ul>
+                <li class="nav-item  ">
+                    <a class="nav-link" href="index.html">Home</a>
+                </li>
+                
+                 <!--<li class="navItem" ><button onclick="getAndDisplayAllmembers()" style="border:none; background:white;">Members</button></li>-->
+                 <li class="nav-item ">
+                    <a class="nav-link" href="books.html">Books</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="members.html">Members</a>
+                </li>
+                <li class="nav-item  active">
+                    <a class="nav-link" href="IssueBook.html">Issue Books</a>
+                </li>
+                <li class="nav-item ">
+                    <a class="nav-link" href="return.html">Reurn Books</a>
+                </li>
+                <li class="nav-item ">
+                    <a class="nav-link" href="detial.html">Compelete Detail</a>
+                </li>
+            </ul>
+        </nav>
+       
+    </header>
+       
+            <!--*************************** search*******************-->
+            <div class="row">
+                <div class="col-xs-6 col-md-6">  <div  class="form-group searchIssueBook">
+                    <label for="memberId">Enter member id:</label>
+                    <input style="height: 37px;;" name="memberId" id="memberId" placeholder="member id" />
+                    <button  class="btn btn-primary"  onclick="getmembersById()" >Search</button></div>
+                </div>
+                <div class="col-xs-6 col-md-6"id="bookSearch"> <div  class="form-group searchIssueBook">
+                    <label for="bname">Enter book name:</label>
+                    <input style="height: 37px;;" name="bname" id="bname" placeholder="book Name" />
+                    <button  class="btn btn-primary "  onclick="getbooks()" >Search</button>
+                    <button  class="btn btn-primary" onclick="getAndDisplayAllbookes()"  >All books List</button></div>
+                </div>
+            </div>
+            <!--    ***********member info******************           -->
+            <div  class="form-group info " id="info" >
+                <label  for="memberId">member name:</label>
+                <input style="height: 37px;border:  bisque;background-color: bisque; font-weight: bold;" name="name" id="name" readonly/>
+                <label for="Email">Email:</label>
+                <input style="height: 37px;border:  bisque;background-color:  bisque; font-weight: bold;" name="email" id="email" readonly/>
+            </div>
+           
+
+         <!--Add Edit-->
+         <div id="viewEditPane"  >
+                         </div>   
+            <!--table for list-->
+          <div class="text" id="member-container">
+            <table class="table" id="listTable" ></table>
+          </div>
+          <div class="text" id="member-container">
+            <table class="table" id="listTable2" ></table>
+          </div>
+        </div>
+       
+</body>
+</html>

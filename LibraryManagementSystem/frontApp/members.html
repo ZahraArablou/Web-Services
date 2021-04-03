@@ -1,0 +1,127 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="CSS/main.css" type="text/css" />
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
+   
+    <script src="scripts/scriptMembers.js"></script>
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <script>
+       $(document).ready(function() {
+        getAndDisplayAllmembers();
+        $("#viewEditPane").hide();
+});
+    </script>
+ </head>
+<body class="body1">
+      <header class=" fixedHeader">
+        <a href="#" class="logo"><img src="images/logo2.jpg" alt="Book logo"></a>
+        <nav>
+            <ul>
+                <li class="nav-item  ">
+                    <a class="nav-link" href="index.html">Home</a>
+                </li>
+                
+                 <!--<li class="navItem" ><button onclick="getAndDisplayAllmembers()" style="border:none; background:white;">Members</button></li>-->
+                 <li class="nav-item ">
+                    <a class="nav-link" href="books.html">Books</a>
+                </li>
+                <li class="nav-item active">
+                    <a class="nav-link" href="members.html">Members</a>
+                </li>
+                <li class="nav-item ">
+                    <a class="nav-link" href="IssueBook.html">Issue Books</a>
+                </li>
+                <li class="nav-item ">
+                    <a class="nav-link" href="return.html">Reurn Books</a>
+                </li>
+                <li class="nav-item ">
+                    <a class="nav-link" href="detial.html">Compelete Detail</a>
+                </li>
+            </ul>
+        </nav>
+       
+    </header>
+        <div class="container " >
+         <div class="row">
+            <div class="col-md-4">
+              <div> <button  class="btn btn-primary allList" onclick="getAndDisplayAllmembers()" > Members List</button></div>
+            </div>
+            <div class="col-md-4">
+                <div></div>
+              </div>
+          </div>
+            <!--*************************** search*******************-->
+              <div class="inputsearch" >
+                <input type="text" class="form-control" id="bname" placeholder="member name">
+                </div>
+                <div class="searchButton">
+                    <button  class="btn btn-primary mb-3"  onclick="getmembersByName()" >Search</button>
+                </div>
+                <div >
+                    <button  class="btn btn-primary add" onclick="addNewMember()" > Add New Member</button>
+                </div>
+         <!--Add Edit-->
+         <div id="viewEditPane"  >
+                         </div>   
+            <!--table for list-->
+          <div class="text" id="member-container">
+            <table class="table" id="listTable" ></table>
+          </div>
+          <div class="text" id="member-container">
+            <table class="table" id="listTable2" ></table>
+          </div>
+        </div>
+        <!--<div class="container foot">
+    <footer class="site-footer ">
+        <div class="site-footer__section ">
+            <h4 class="site-footer__section-heading ">E-Book Library</h4>
+            <ul class="site-footer__list ">
+                <li>
+                    <a href="index.html ">Home</a>
+                </li>
+                <li>
+                    <a href="Members.html">Members</a>
+                </li>
+                <li>
+                    <a href="#">members</a>
+                </li>
+                <li>
+                    <a href="#">Issue Members</a>
+                    <li>
+                      <a href="#">Return Members</a>
+                  </li>
+                  <li>
+                    <a href="# ">Complete Members Details</a>
+                </li>
+                </li>
+            </ul>
+        </div>
+     
+        <div class="site-footer__section ">
+           
+            <small>&copy; webservices Project.<br />All Rights Reserved.<br />
+                <a href="# ">Terms</a> under which this service is provided to you.<br>
+            </small>
+        </div>
+        <div class="site-footer__section ">
+          <ul class="site-footer__list certifiedlogo ">
+              <li>
+                  <a href="http://www.johnabbott.qc.ca/ "><img src="images/john-abbott-college.png "
+                          alt="john-abbott-college "></a>
+              </li>
+
+          </ul>
+         
+      </div>
+    </footer>
+        </div>-->
+      <!-- <script src="scripts/script.js"></script>-->
+        <!--<script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>-->
+        
+</body>
+</html>

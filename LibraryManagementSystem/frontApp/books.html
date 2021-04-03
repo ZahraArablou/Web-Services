@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="CSS/main.css" type="text/css" />
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
+   
+    <script src="scripts/scriptBooks.js"></script>
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <script>
+       $(document).ready(function() {
+        getAndDisplayAllbookes();
+        $("#viewEditPane").hide();
+});
+    </script>
+ </head>
+<body class="body1">
+      <header class=" fixedHeader">
+        <a href="#" class="logo"><img src="images/logo2.jpg" alt="Book logo"></a>
+        <nav>
+            <ul>
+                <li >
+                    <a class="nav-link" href="index.html">Home</a>
+                </li>
+                 <!--<li class="navItem" ><button onclick="getAndDisplayAllbookes()" style="border:none; background:white;">books</button></li>-->
+                 <li class="active">
+                    <a class="nav-link" href="books.html">books</a>
+                </li>
+                <li class="nav-item ">
+                    <a class="nav-link" href="members.html">Members</a>
+                </li>
+                <li class="nav-item ">
+                    <a class="nav-link" href="IssueBook.html">Issue Books</a>
+                </li>
+                <li class="nav-item ">
+                    <a class="nav-link" href="return.html">Reurn Books</a>
+                </li>
+                <li class="nav-item ">
+                    <a class="nav-link" href="detial.html">Compelete Detail</a>
+                </li>
+            </ul>
+        </nav>
+    </header>
+        <div class="container " >
+         <div class="row">
+            <div class="col-md-4">
+              <div> <button  class="btn btn-primary allList" onclick="getAndDisplayAllbookes()" > Books List</button></div>
+            </div>
+            <div class="col-md-4">
+                <div></div>
+              </div>
+         
+          </div>
+            <!--*************************** search*******************-->
+              <div class="inputsearch" >
+                <input type="text" class="form-control" id="bname" placeholder="book name">
+                </div>
+                <div class="searchButton">
+                    <button  class="btn btn-primary mb-3"  onclick="getbooksByName()" >Search</button>
+                </div>
+                <div >
+                    <button class="btn btn-primary add" onclick="addNewBook()" > Add New Book</button>
+                </div>
+         <!--Add Edit-->
+         <div id="viewEditPane"  >
+                         </div>   
+            <!--table for list-->
+          <div class="text" id="book-container">
+            <table class="table" id="listTable" ></table>
+          </div>
+          <div class="text" id="book-container">
+            <table class="table" id="listTable2" ></table>
+          </div>
+        </div>
+</body>
+</html>
